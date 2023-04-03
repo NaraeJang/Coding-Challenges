@@ -153,12 +153,20 @@ background-image: url(images/icon-cart.svg);
 
 /* product styles */
 .product {
-    --content-padding: 1.5rem;
+    --content-padding: 1.825rem;
     --content-spacing: 1rem;
+    display: grid;
 
     background-color: var(--clr-netural-100);
     border-radius: .5rem;
     overflow: hidden;
+    max-width: 600px;
+}
+
+@media (min-width: 600px) {
+    .product {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .product__content {
