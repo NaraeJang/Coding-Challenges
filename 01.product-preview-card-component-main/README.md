@@ -7,5 +7,5 @@
 - line-height
 - class:is(:group1, :group2)
 - class:where(:groupe1, :group2)
-- sudo elements
+- pseudo elements
 - responsive web
