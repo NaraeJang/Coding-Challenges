@@ -1,0 +1,249 @@
+:root {
+    --clr-primary-100: hsl(225, 100%, 94%);
+    --clr-secondary-500: hsl(245, 75%, 52%);
+
+    --clr-neutral-100: hsl(225, 100%, 98%);
+    --clr-neutral-400: hsl(224, 23%, 55%);
+    --clr-neutral-800: hsl(223, 47%, 23%);
+
+    --clr-gray-400: #7c8192;
+
+    --ff-base: 'Red Hat Display', sans-serif;
+
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-black: 900;
+
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+    height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+    isolation: isolate;
+}
+
+
+
+/* general styling */
+body {
+    background-color: var(--clr-neutral-100);
+    background-image: url(images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+
+/* button styling */
+.btn-primary {
+    background-color: var(--clr-secondary-500);
+    color: var(--clr-neutral-100);
+    border-radius: .725rem;
+    padding: 12px;
+    text-decoration: none;
+    border-style: none;
+    font-weight: var(--fw-bold);
+    box-shadow: 0px 12px 15px var(--clr-primary-100);
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.btn-primary:hover {
+    background-color:  hsl(245, 75%, 64%);
+}
+
+.btn-secondary {
+    border-radius: .725rem;
+    padding: 8px;
+    text-decoration: none;
+    border-style: none;
+    background-color: #ffffff;
+    font-weight: var(--fw-bold);
+    color: var(--clr-gray-400);
+    cursor: pointer;
+    transition: 200ms;
+}
+.btn-secondary:hover {
+    color: black;
+}
+
+
+/* oder styling */
+.order {
+    --order-spacing: 1.125rem;
+
+    border-radius: 1rem;
+    overflow: hidden;
+    display: grid;
+    max-width: 375px;
+    min-width: 350px;
+}
+
+.order__content {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: white;
+    display: grid;
+    gap: var(--order-spacing);
+    font-family: var(--ff-base);
+}
+
+.order__content h1 {
+    font-weight: var(--fw-black);
+}
+
+.order__content p {
+    font-weight: var(--fw-medium);
+    color: var(--clr-gray-400);
+    line-height: 1.5rem;
+}
+
+.order__content-p {
+    padding: 0 1rem;
+}
+
+
+/* plan-box styling */
+.plan-box {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--clr-neutral-100);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+    line-height: 0.8rem;
+}
+
+.plan-box_group {
+    display: flex;
+    gap: 1rem;
+}
+
+.plan-box__content {
+    padding-top: .425rem;
+}
+
+.plan-box__content :is(h2, p) {
+    font-size: 1rem;
+    font-weight: var(--fw-bold);
+}
+
+.plan-box a {
+    color: var(--clr-neutral-800);
+    font-weight: var(--fw-bold);
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.plan-box a:hover {
+    color: var(--clr-neutral-400);
+    text-decoration: none;
+}
+
+
+@media (min-width: 400px) {
+    body {
+        background-image: url(images/pattern-background-desktop.svg);
+        width: auto;
+        background-repeat: no-repeat;
+    }
+
+    .order {
+        max-width: 400px;
+    }
+
+    .order__content {
+        padding: 2.5rem;
+    }
+
+
+}
+
+
+
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
