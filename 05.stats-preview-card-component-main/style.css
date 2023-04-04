@@ -100,7 +100,79 @@ h6 {
 
 
 /* general styling */
+body {
+  background-color: var(--clr-bg-900);
+  display: grid;
+  place-content: center;
+  margin: 5rem;
+}
 
+
+
+/* header styling */
+.header {
+  background-color: var(--clr-bg-800);
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 1440px;
+  border-radius: 0.7rem;
+  overflow: hidden;
+}
+
+.header__content {
+  padding: 3.5rem;
+  margin-right: 2rem;
+  font-family: var(--ff-base);
+  color: var(--clr-neutral-headings);
+  /* max-width: 500px; */
+  display: grid;
+  gap: 1.25rem;
+}
+
+.header__content h1, h2 {
+  color: var(--clr-neutral-100);
+}
+
+.header__content h1 {
+  line-height: 2.325rem;
+  font-size: 1.75rem;
+}
+
+.header__content h1 span {
+  color: var(--clr-primary-400);
+}
+
+/* header group styling */
+.header__group {
+  display: inline-flex;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.header__group h2 {
+  font-size: 1.5rem;
+}
+
+.header__group p {
+  font-size: 0.9375rem;
+  text-transform: uppercase;
+}
+
+
+@media(max-width: 600px) {
+body {
+  place-content: center;
+}
+
+  .header {
+    display: grid;
+  }
+
+  .header__content {
+    margin: 1rem;
+    /* max-width: 400px; */
+  }
+}
 
 
 
